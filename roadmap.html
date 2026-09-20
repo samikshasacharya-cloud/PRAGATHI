@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pragathi - Career Roadmap</title>
+
+   <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding: 28px 18px 70px;
+    color: #24243b;
+    background:
+        linear-gradient(rgba(248,247,255,0.88), rgba(255,248,252,0.92)),
+        url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2000&q=80")
+        center/cover fixed;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* TOP */
+
+.top {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo {
+    font-size: 43px;
+    font-weight: 900;
+    background: linear-gradient(90deg,#5946d8,#b05be8,#e86f9c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    margin-top: 7px;
+    color: #73758c;
+    font-size: 15px;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 38px;
+    margin-bottom: 45px;
+    border-radius: 32px;
+    background:
+        linear-gradient(135deg,rgba(232,226,255,.92),rgba(255,231,242,.92));
+    box-shadow: 0 25px 70px rgba(70,55,130,.15);
+    border: 1px solid rgba(255,255,255,.8);
+}
+
+.hero::after {
+    content: "✦";
+    position: absolute;
+    right: 45px;
+    top: 15px;
+    font-size: 120px;
+    color: rgba(91,70,210,.08);
+}
+
+.hero-small {
+    color: #7666bd;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.hero h1 {
+    margin-top: 8px;
+    font-size: 34px;
+    color: #30285f;
+}
+
+.hero p {
+    margin-top: 10px;
+    max-width: 680px;
+    color: #686b80;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.next-step {
+    display: inline-flex;
+    margin-top: 22px;
+    padding: 12px 18px;
+    border-radius: 25px;
+    background: rgba(255,255,255,.78);
+    color: #5543c8;
+    font-weight: 700;
+    font-size: 13px;
+    box-shadow: 0 8px 20px rgba(70,50,130,.08);
+}
+
+/* HEADINGS */
+
+.journey-title,
+.section-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.journey-title h2,
+.section-heading h2 {
+    color: #302b63;
+    font-size: 27px;
+}
+
+.journey-title p,
+.section-heading p {
+    margin-top: 7px;
+    color: #77798c;
+    font-size: 14px;
+}
+
+/* JOURNEY */
+
+.journey {
+    position: relative;
+    min-height: 760px;
+    padding: 20px 0;
+}
+
+.road {
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    top: 70px;
+    bottom: 70px;
+    border: 8px solid rgba(213,205,248,.8);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    transform: rotate(-2deg);
+    z-index: 0;
+}
+
+.road-inner {
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    top: 85px;
+    bottom: 85px;
+    border-top: 3px dashed #a99be9;
+    border-bottom: 3px dashed #a99be9;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* CHECKPOINT */
+
+.checkpoint {
+    position: relative;
+    z-index: 2;
+    width: 46%;
+    margin-bottom: 35px;
+    padding: 25px;
+    border-radius: 27px;
+    background: rgba(255,255,255,.94);
+    border: 2px solid rgba(255,255,255,.9);
+    box-shadow: 0 18px 48px rgba(55,48,105,.12);
+    transition: .3s ease;
+}
+
+.checkpoint:hover {
+    transform: translateY(-8px) scale(1.01) !important;
+    box-shadow: 0 28px 65px rgba(55,48,105,.18);
+}
+
+.checkpoint:nth-child(odd) {
+    margin-left: 3%;
+    transform: rotate(-1.5deg);
+}
+
+.checkpoint:nth-child(even) {
+    margin-left: 51%;
+    transform: rotate(1.5deg);
+}
+
+.number {
+    position: absolute;
+    top: -18px;
+    left: 22px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 900;
+    background: linear-gradient(135deg,#5b48d5,#a16ee8);
+    box-shadow: 0 9px 25px rgba(81,66,199,.3);
+}
+
+.checkpoint-icon {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.checkpoint h3 {
+    color: #302b63;
+    font-size: 21px;
+}
+
+.checkpoint-description {
+    margin-top: 7px;
+    color: #72758a;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* TASKS */
+
+.tasks {
+    margin-top: 16px;
+    list-style: none;
+}
+
+.tasks li {
+    margin: 9px 0;
+}
+
+.tasks label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 13px;
+    background: #f8f7ff;
+    color: #50536a;
+    font-size: 13px;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.tasks label:hover {
+    background: #eeeaff;
+    transform: translateX(4px);
+}
+
+.roadmap-task {
+    width: 18px;
+    height: 18px;
+    accent-color: #6752d7;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.roadmap-task:checked + * {
+    text-decoration: line-through;
+}
+
+.duration {
+    display: inline-block;
+    margin-top: 13px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #efecff;
+    color: #6250c7;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* RESOURCES */
+
+.resources {
+    margin-top: 35px;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.resource-card {
+    padding: 24px;
+    border-radius: 24px;
+    background: rgba(255,255,255,.93);
+    box-shadow: 0 16px 42px rgba(45,48,90,.09);
+    transition: .3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-6px);
+}
+
+.resource-card h3 {
+    color: #302b63;
+    font-size: 18px;
+}
+
+.resource-card p {
+    margin-top: 7px;
+    color: #77798c;
+    font-size: 13px;
+}
+
+.resource-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+    padding: 13px;
+    border-radius: 16px;
+    background: #f7f5ff;
+}
+
+.resource-name {
+    color: #45485f;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.resource-buttons {
+    display: flex;
+    gap: 7px;
+}
+
+.resource-button {
+    border: none;
+    padding: 8px 11px;
+    border-radius: 18px;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.resource-button:hover {
+    transform: translateY(-2px);
+}
+
+.video {
+    background: #ffe7ed;
+    color: #bd4e68;
+}
+
+.pdf {
+    background: #e8ebff;
+    color: #4e5db7;
+}
+
+/* PLANNER */
+
+.planner,
+.progress {
+    margin-top: 35px;
+    padding: 28px;
+    border-radius: 27px;
+    background: rgba(255,255,255,.94);
+    box-shadow: 0 18px 45px rgba(45,48,90,.09);
+}
+
+.planner h2,
+.progress h2 {
+    color: #302b63;
+    margin-bottom: 20px;
+}
+
+.planner-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+.planner-box {
+    padding: 20px;
+    text-align: center;
+    border-radius: 19px;
+    background: #f7f5ff;
+    transition: .25s ease;
+}
+
+.planner-box:hover {
+    transform: translateY(-4px);
+}
+
+.planner-box .icon {
+    font-size: 28px;
+}
+
+.planner-box strong {
+    display: block;
+    margin-top: 7px;
+    color: #5543c8;
+    font-size: 18px;
+}
+
+.planner-box small {
+    color: #77798c;
+    font-size: 11px;
+}
+
+/* PROGRESS */
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+    color: #55586d;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.progress-bar {
+    height: 15px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #ebeaf4;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg,#604bd2,#a86ee8,#e77ca8);
+    transition: width .6s ease;
+}
+
+/* FUTURE */
+
+.future {
+    margin-top: 35px;
+    padding: 42px 25px;
+    text-align: center;
+    border-radius: 32px;
+    background:
+        linear-gradient(135deg,rgba(235,230,255,.94),rgba(255,235,244,.94));
+    box-shadow: 0 20px 55px rgba(45,48,90,.11);
+}
+
+.future h2 {
+    color: #30285f;
+    font-size: 27px;
+}
+
+.future p {
+    max-width: 650px;
+    margin: 10px auto 22px;
+    color: #707487;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.future button {
+    border: none;
+    padding: 14px 27px;
+    border-radius: 30px;
+    color: white;
+    background: linear-gradient(135deg,#5846ca,#8568df);
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(84,68,190,.25);
+    transition: .25s ease;
+}
+
+.future button:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+/* MOBILE */
+
+@media (max-width:750px) {
+
+    body {
+        padding: 18px 12px 50px;
+        background-attachment: scroll;
+    }
+
+    .logo {
+        font-size: 33px;
+    }
+
+    .hero {
+        padding: 26px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .journey {
+        min-height: auto;
+    }
+
+    .road,
+    .road-inner {
+        display: none;
+    }
+
+    .checkpoint,
+    .checkpoint:nth-child(odd),
+    .checkpoint:nth-child(even) {
+        width: 100%;
+        margin-left: 0;
+        transform: none;
+    }
+
+    .checkpoint:hover {
+        transform: translateY(-5px) !important;
+    }
+
+    .resource-grid,
+    .planner-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resource-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="top">
+        <div class="logo">🌱 Pragathi</div>
+        <p class="subtitle">
+            Your personalised career journey
+        </p>
+    </div>
+
+
+    <!-- CAREER INTRO -->
+
+    <div class="hero">
+
+        <div class="hero-small">
+            Your Career Journey
+        </div>
+
+        <h1 id="careerName">
+            Loading...
+        </h1>
+
+        <p>
+            Your roadmap takes you step-by-step from your current
+            knowledge towards your career goal.
+        </p>
+
+        <div class="next-step">
+            💡 Next step: Start with your foundation
+        </div>
+
+    </div>
+
+
+    <!-- JOURNEY -->
+
+    <div class="journey-title">
+
+        <h2>🗺️ Your Learning Journey</h2>
+
+        <p>
+            Every checkpoint takes you one step closer to your goal.
+        </p>
+
+    </div>
+
+
+    <div class="journey">
+
+        <div class="road"></div>
+        <div class="road-inner"></div>
+
+
+        <!-- FOUNDATION -->
+
+        <div class="checkpoint">
+
+            <div class="number">01</div>
+
+            <div class="checkpoint-icon">🌱</div>
+
+            <h3>Foundation</h3>
+
+            <p class="checkpoint-description">
+                Build the basic knowledge you need before moving
+                into advanced skills.
+            </p>
+
+          <ul class="tasks" id="foundationTasks">
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Understand computer basics
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Learn programming fundamentals
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Understand problem solving
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Learn basic career concepts
+        </label>
+    </li>
+
+</ul>
+
+            <span class="duration">
+                1–2 weeks
+            </span>
+
+        </div>
+
+
+        <!-- SKILL BUILDING -->
+
+        <div class="checkpoint">
+
+            <div class="number">02</div>
+
+            <div class="checkpoint-icon">🧠</div>
+
+            <h3>Skill Building</h3>
+
+            <p class="checkpoint-description">
+                Develop the important skills identified in your
+                career analysis.
+            </p>
+
+            <ul class="tasks" id="skillBuildingTasks">
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Learn required technical skills
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Practice each skill
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Complete small exercises
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Strengthen weak areas
+        </label>
+    </li>
+
+</ul>
+
+            <span class="duration">
+                3–6 weeks
+            </span>
+
+        </div>
+
+
+        <!-- PROJECTS -->
+
+        <div class="checkpoint">
+
+            <div class="number">03</div>
+
+            <div class="checkpoint-icon">💻</div>
+
+            <h3>Projects</h3>
+
+            <p class="checkpoint-description">
+                Turn your knowledge into practical experience.
+            </p>
+
+           < ul class="tasks" id="projectTasks">
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Beginner project
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Intermediate project
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Major project
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Add projects to portfolio
+        </label>
+    </li>
+
+</ul>
+
+            <span class="duration">
+                4–8 weeks
+            </span>
+
+        </div>
+
+
+        <!-- RESUME -->
+
+        <div class="checkpoint">
+
+            <div class="number">04</div>
+
+            <div class="checkpoint-icon">📄</div>
+
+            <h3>Resume & Portfolio</h3>
+
+            <p class="checkpoint-description">
+                Present your skills, projects and achievements
+                professionally.
+            </p>
+
+            <ul class="tasks" id="resumeTasks">
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Create your resume
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Add projects
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Add certificates
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Build your portfolio
+        </label>
+    </li>
+
+</ul>
+
+            <span class="duration">
+                1–2 weeks
+            </span>
+
+        </div>
+
+
+        <!-- CAREER READY -->
+
+        <div class="checkpoint">
+
+            <div class="number">05</div>
+
+            <div class="checkpoint-icon">🚀</div>
+
+            <h3>Career Ready</h3>
+
+            <p class="checkpoint-description">
+                Prepare yourself for real career opportunities.
+            </p>
+
+           <ul class="tasks" id="careerReadyTasks">
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Interview preparation
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Technical practice
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Communication skills
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" class="roadmap-task">
+            Internship & job preparation
+        </label>
+    </li>
+
+</ul>
+
+            <span class="duration">
+                2–4 weeks
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- RESOURCES -->
+
+    <!-- RESOURCES -->
+
+<div class="resources">
+
+    <div class="section-heading">
+
+        <h2>📚 Learning Resources</h2>
+
+        <p>
+            Resources are organised according to the skills you need.
+        </p>
+
+    </div>
+
+    <div class="resource-grid" id="resourceGrid">
+
+        <!-- Resources will be added automatically -->
+
+    </div>
+
+</div>
+
+    <!-- TIME PLANNER -->
+
+    <div class="planner">
+
+        <h2>⏰ Time Planner</h2>
+
+       <div class="planner-grid">
+
+    <div class="planner-box">
+        <div class="icon">⏰</div>
+
+        <strong>
+            <input type="number" id="hoursPerDay" min="1" max="12" value="2">
+            Hours
+        </strong>
+
+        <small>
+            Study per day
+        </small>
+    </div>
+
+
+    <div class="planner-box">
+        <div class="icon">📅</div>
+
+        <strong>
+            <input type="number" id="daysPerWeek" min="1" max="7" value="5">
+            Days
+        </strong>
+
+        <small>
+            Study per week
+        </small>
+    </div>
+
+
+    <div class="planner-box">
+        <div class="icon">🎯</div>
+
+        <strong>
+            <input type="number" id="weeksAvailable" min="1" max="52" value="12">
+            Weeks
+        </strong>
+
+        <small>
+            Preparation duration
+        </small>
+    </div>
+
+
+    <div class="planner-box">
+        <div class="icon">🌅</div>
+
+        <strong>
+            <select id="studyTime">
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+                <option value="night">Night</option>
+            </select>
+        </strong>
+
+        <small>
+            Preferred study time
+        </small>
+    </div>
+
+</div>
+<div class="study-summary">
+    <h3>📊 Your Study Plan</h3>
+    <p>
+        You have planned
+        <strong id="totalStudyHours">0</strong>
+        total study hours.
+    </p>
+</div>
+
+    <!-- PROGRESS -->
+
+    <div class="progress">
+
+        <h2>📈 Your Progress</h2>
+
+        <div class="progress-info">
+
+            <span>Roadmap completion</span>
+
+            <span id="progressText">0%</span>
+
+        </div>
+
+        <div class="progress-bar">
+
+            <div
+                class="progress-fill"
+                id="progressFill">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FUTURE -->
+
+    <div class="future">
+
+        <h2>🔮 Your Future Awaits</h2>
+
+        <p>
+            Complete your roadmap and continue exploring possible
+            careers, international opportunities, languages,
+            resume improvement and portfolio building.
+        </p>
+
+        <button onclick="openFuture()">
+            Explore Your Future →
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    /* GET SELECTED CAREER */
+
+    /* GET CAREER ROADMAP FROM BACKEND */
+
+const selectedCategory =
+    localStorage.getItem("selectedCareer");
+
+const profile =
+    JSON.parse(
+        localStorage.getItem("pragathiProfile") || "{}"
+    );
+
+const selectedSkills =
+    profile.skills || [];
+
+async function loadCareerRoadmap() {
+
+    try {
+
+        if (!selectedCategory) {
+            document.getElementById("careerName")
+                .textContent = "Career not selected";
+            return;
+        }
+
+        const skills =
+            selectedSkills.join(",");
+
+        const response =
+            await fetch(
+                "http://localhost:3000/api/roadmap?category="
+                + encodeURIComponent(selectedCategory)
+                + "&skills="
+                + encodeURIComponent(skills)
+            );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.message);
+        }
+
+        /* Show the actual career name */
+
+        document.getElementById("careerName")
+            .textContent = data.career;
+
+        /* Show career-specific roadmap */
+
+        const roadmapTasks =
+            document.querySelectorAll(".roadmap-task");
+
+        data.roadmap.forEach(function(step, index) {
+
+            if (roadmapTasks[index]) {
+
+                const label =
+                    roadmapTasks[index].parentElement;
+
+                label.lastChild.textContent =
+                    " " + step;
+            }
+
+        });
+
+    } catch (error) {
+
+        console.error(
+            "Failed to load career roadmap:",
+            error
+        );
+
+    }
+
+}
+
+loadCareerRoadmap();
+
+    /* RESOURCE PLACEHOLDER */
+
+    
+function openResource(resourceName) {
+
+    const resources = {
+
+        "HTML & CSS video":
+            "https://www.youtube.com/results?search_query=HTML+CSS+beginner+tutorial",
+
+        "Programming video":
+            "https://www.youtube.com/results?search_query=programming+fundamentals+for+beginners",
+
+        "JavaScript video":
+            "https://www.youtube.com/results?search_query=JavaScript+beginner+tutorial",
+
+        "Database video":
+            "https://www.youtube.com/results?search_query=database+fundamentals+for+beginners",
+
+        "HTML & CSS PDF":
+            "https://www.w3.org/standards/webdesign/htmlcss",
+
+        "Programming PDF":
+            "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+
+        "JavaScript PDF":
+            "https://eloquentjavascript.net/Eloquent_JavaScript.pdf",
+
+        "Database PDF":
+            "https://www.postgresql.org/files/documentation/pdf/18/postgresql-18-A4.pdf"
+    };
+
+    if (resources[resourceName]) {
+        window.open(resources[resourceName], "_blank");
+    }
+}
+
+    /* FUTURE PLANNER */
+
+    function openFuture() {
+
+        window.location.href = "../future-planner.html";
+
+    }
+
+
+   /* ROADMAP PROGRESS */
+
+function updateProgress() {
+
+    const tasks =
+        document.querySelectorAll(".roadmap-task");
+
+    const completedTasks =
+        document.querySelectorAll(".roadmap-task:checked").length;
+
+    const totalTasks = tasks.length;
+
+    const progress =
+        totalTasks === 0
+            ? 0
+            : Math.round((completedTasks / totalTasks) * 100);
+
+    document.getElementById("progressFill")
+        .style.width = progress + "%";
+
+    document.getElementById("progressText")
+        .textContent = progress + "%";
+}
+
+
+function setupTaskTracking() {
+
+    const tasks =
+        document.querySelectorAll(".roadmap-task");
+
+    tasks.forEach(function(task, index) {
+
+        task.checked =
+            localStorage.getItem("roadmapTask" + index) === "true";
+
+        task.addEventListener("change", function() {
+
+            localStorage.setItem(
+                "roadmapTask" + index,
+                task.checked
+            );
+
+            updateProgress();
+
+        });
+
+    });
+
+}
+/* PERSONALISE FOUNDATION */
+
+const foundationTasks =
+    document.getElementById("foundationTasks");
+
+if (selectedCareer === "Medicine & Healthcare") {
+
+    foundationTasks.innerHTML = `
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Strengthen Biology fundamentals
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Learn Human Anatomy basics
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Understand healthcare fundamentals
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Develop scientific problem solving
+            </label>
+        </li>
+    `;
+
+} else if (selectedCareer === "Finance & Banking") {
+
+    foundationTasks.innerHTML = `
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Learn Accounting fundamentals
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Understand Finance basics
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Learn Economics fundamentals
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Develop analytical thinking
+            </label>
+        </li>
+    `;
+
+}
+/* PERSONALISE SKILL BUILDING */
+
+const skillBuildingTasks =
+    document.getElementById("skillBuildingTasks");
+
+if (selectedCareer === "Engineering & Technology") {
+
+    skillBuildingTasks.innerHTML = `
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Learn programming
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Learn HTML & CSS
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Learn JavaScript
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Practice problem solving
+            </label>
+        </li>
+    `;
+
+} else if (selectedCareer === "Medicine & Healthcare") {
+
+    skillBuildingTasks.innerHTML = `
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Study Human Anatomy
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Study Physiology
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Strengthen Biology
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Practice scientific analysis
+            </label>
+        </li>
+    `;
+
+} else if (selectedCareer === "Finance & Banking") {
+
+    skillBuildingTasks.innerHTML = `
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Learn Accounting
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Learn Financial analysis
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Understand Economics
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Practice data analysis
+            </label>
+        </li>
+    `;
+
+}
+/* PERSONALISE PROJECTS */
+
+const projectTasks =
+    document.getElementById("projectTasks");
+
+if (selectedCareer === "Engineering & Technology") {
+
+    projectTasks.innerHTML = `
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Build a simple website
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Build an interactive web app
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Build a major team project
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Add projects to your portfolio
+            </label>
+        </li>
+    `;
+
+} else if (selectedCareer === "Medicine & Healthcare") {
+
+    projectTasks.innerHTML = `
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Create a health awareness project
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Complete a healthcare research project
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Create a health-related presentation
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Add projects to your portfolio
+            </label>
+        </li>
+    `;
+
+}
+/* PERSONALISE RESUME */
+
+const resumeTasks =
+    document.getElementById("resumeTasks");
+
+if (selectedCareer === "Engineering & Technology") {
+
+    resumeTasks.innerHTML = `
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Create a technical resume
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Add technical projects
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Add technical skills and certificates
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Build a developer portfolio
+            </label>
+        </li>
+    `;
+
+} else if (selectedCareer === "Medicine & Healthcare") {
+
+    resumeTasks.innerHTML = `
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Create a healthcare-focused resume
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Add research and projects
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Add certificates and achievements
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Build a professional portfolio
+            </label>
+        </li>
+    `;
+
+}
+/* PERSONALISE CAREER READY */
+
+const careerReadyTasks =
+    document.getElementById("careerReadyTasks");
+
+if (selectedCareer === "Engineering & Technology") {
+
+    careerReadyTasks.innerHTML = `
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Prepare for technical interviews
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Practice coding problems
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Improve technical communication
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Prepare for internships and jobs
+            </label>
+        </li>
+    `;
+
+} else if (selectedCareer === "Medicine & Healthcare") {
+
+    careerReadyTasks.innerHTML = `
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Prepare for healthcare interviews
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Practice clinical knowledge
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Improve professional communication
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="checkbox" class="roadmap-task">
+                Explore internships and opportunities
+            </label>
+        </li>
+    `;
+
+}
+function setupTimePlanner() {
+
+    const hoursPerDay = document.getElementById("hoursPerDay");
+    const daysPerWeek = document.getElementById("daysPerWeek");
+    const weeksAvailable = document.getElementById("weeksAvailable");
+    const studyTime = document.getElementById("studyTime");
+
+    // Load saved values
+    hoursPerDay.value =
+        localStorage.getItem("hoursPerDay") || "2";
+
+    daysPerWeek.value =
+        localStorage.getItem("daysPerWeek") || "5";
+
+    weeksAvailable.value =
+        localStorage.getItem("weeksAvailable") || "12";
+
+    studyTime.value =
+        localStorage.getItem("studyTime") || "morning";
+
+
+    // Save values whenever the student changes them
+    hoursPerDay.addEventListener("change", function() {
+        localStorage.setItem("hoursPerDay", hoursPerDay.value);
+    });
+
+    daysPerWeek.addEventListener("change", function() {
+        localStorage.setItem("daysPerWeek", daysPerWeek.value);
+    });
+
+    weeksAvailable.addEventListener("change", function() {
+        localStorage.setItem("weeksAvailable", weeksAvailable.value);
+    });
+
+    studyTime.addEventListener("change", function() {
+        localStorage.setItem("studyTime", studyTime.value);
+    });
+}
+
+setupTimePlanner();
+function calculateStudyTime() {
+    const hours = Number(document.getElementById("hoursPerDay").value);
+    const days = Number(document.getElementById("daysPerWeek").value);
+    const weeks = Number(document.getElementById("weeksAvailable").value);
+
+    const totalHours = hours * days * weeks;
+
+    document.getElementById("totalStudyHours").textContent = totalHours;
+}
+
+calculateStudyTime();
+document.getElementById("hoursPerDay").addEventListener("change", calculateStudyTime);
+document.getElementById("daysPerWeek").addEventListener("change", calculateStudyTime);
+document.getElementById("weeksAvailable").addEventListener("change", calculateStudyTime);
+setupTaskTracking();
+function loadResources() {
+
+    const resourceGrid = document.getElementById("resourceGrid");
+
+    const resources = [
+        {
+            skill: "HTML & CSS",
+            video: "https://www.youtube.com/results?search_query=HTML+CSS+full+course",
+            pdf: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+        },
+        {
+            skill: "JavaScript",
+            video: "https://www.youtube.com/results?search_query=JavaScript+full+course",
+            pdf: "https://eloquentjavascript.net/Eloquent_JavaScript.pdf"
+        },
+        {
+            skill: "C++",
+            video: "https://www.youtube.com/results?search_query=C%2B%2B+full+course",
+            pdf: "https://www.learncpp.com/"
+        }
+    ];
+
+    resourceGrid.innerHTML = "";
+
+    resources.forEach(function(resource) {
+
+        resourceGrid.innerHTML += `
+            <div class="resource-card">
+
+                <h3>📚 ${resource.skill}</h3>
+
+                <div class="resource-buttons">
+
+                    <a href="${resource.video}" target="_blank">
+                        ▶️ YouTube Video
+                    </a>
+
+                    <a href="${resource.pdf}" target="_blank">
+                        📄 PDF / Notes
+                    </a>
+
+                </div>
+
+            </div>
+        `;
+    });
+}
+function loadResources() {
+
+    const resourceGrid = document.getElementById("resourceGrid");
+
+    resourceGrid.innerHTML = `
+        <div class="resource-card">
+            <h3>🌐 HTML & CSS</h3>
+
+            <button onclick="openResource('HTML & CSS video')">
+                ▶️ YouTube Video
+            </button>
+
+            <button onclick="openResource('HTML & CSS PDF')">
+                📄 PDF / Notes
+            </button>
+        </div>
+
+        <div class="resource-card">
+            <h3>💻 Programming</h3>
+
+            <button onclick="openResource('Programming video')">
+                ▶️ YouTube Video
+            </button>
+
+            <button onclick="openResource('Programming PDF')">
+                📄 PDF / Notes
+            </button>
+        </div>
+
+        <div class="resource-card">
+            <h3>⚡ JavaScript</h3>
+
+            <button onclick="openResource('JavaScript video')">
+                ▶️ YouTube Video
+            </button>
+
+            <button onclick="openResource('JavaScript PDF')">
+                📄 PDF / Notes
+            </button>
+        </div>
+
+        <div class="resource-card">
+            <h3>🗄️ Database</h3>
+
+            <button onclick="openResource('Database video')">
+                ▶️ YouTube Video
+            </button>
+
+            <button onclick="openResource('Database PDF')">
+                📄 PDF / Notes
+            </button>
+        </div>
+    `;
+}
+
+
+loadResources();
+</script>
+
+</body>
+</html>

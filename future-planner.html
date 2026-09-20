@@ -1,0 +1,2343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pragathi | Beyond Today</title>
+
+
+    <style>
+
+        /* =====================================
+           BASIC RESET
+        ===================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            color: #263238;
+
+            min-height: 100vh;
+
+            overflow-x: hidden;
+
+            background:
+                linear-gradient(
+                    rgba(247, 250, 255, 0.88),
+                    rgba(247, 250, 255, 0.94)
+                ),
+                url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=80");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+        }
+
+
+        /* =====================================
+           FLOATING DECORATION
+        ===================================== */
+
+        .blob {
+
+            position: fixed;
+
+            border-radius: 50%;
+
+            filter: blur(5px);
+
+            opacity: 0.25;
+
+            z-index: -1;
+
+            animation: floating 8s ease-in-out infinite;
+        }
+
+
+        .blob-one {
+
+            width: 280px;
+            height: 280px;
+
+            background: #b9e7ff;
+
+            top: 80px;
+            left: -100px;
+        }
+
+
+        .blob-two {
+
+            width: 350px;
+            height: 350px;
+
+            background: #e5c8ff;
+
+            right: -130px;
+            top: 400px;
+
+            animation-delay: 2s;
+        }
+
+
+        .blob-three {
+
+            width: 220px;
+            height: 220px;
+
+            background: #c8f5dc;
+
+            left: 35%;
+            bottom: -100px;
+
+            animation-delay: 4s;
+        }
+
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-25px);
+            }
+
+        }
+
+
+        /* =====================================
+           NAVBAR
+        ===================================== */
+
+        .navbar {
+
+            width: 92%;
+
+            max-width: 1200px;
+
+            margin: 20px auto;
+
+            padding: 15px 22px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: rgba(255, 255, 255, 0.80);
+
+            backdrop-filter: blur(18px);
+
+            border-radius: 22px;
+
+            border: 1px solid rgba(255, 255, 255, 0.9);
+
+            box-shadow:
+                0 15px 45px rgba(65, 75, 110, 0.12);
+
+            position: sticky;
+
+            top: 15px;
+
+            z-index: 100;
+        }
+
+
+        .logo {
+
+            font-size: 25px;
+
+            font-weight: 800;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #5558d5,
+                    #9b55d8
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .back-button {
+
+            text-decoration: none;
+
+            color: #5759ce;
+
+            background: white;
+
+            padding: 10px 18px;
+
+            border-radius: 25px;
+
+            font-weight: 600;
+
+            box-shadow:
+                0 8px 20px rgba(80, 80, 150, 0.10);
+
+            transition: 0.3s;
+        }
+
+
+        .back-button:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 25px rgba(80, 80, 150, 0.18);
+        }
+
+
+        /* =====================================
+           HERO
+        ===================================== */
+
+        .hero {
+
+            max-width: 1000px;
+
+            margin: 70px auto 50px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            animation: appear 1s ease;
+        }
+
+
+        @keyframes appear {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(25px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+            }
+
+        }
+
+
+        .hero-label {
+
+            color: #6869d9;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+        }
+
+
+        .hero h1 {
+
+            font-size: clamp(42px, 7vw, 75px);
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #4e51c9,
+                    #9b55d8,
+                    #4b8fd5
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .hero p {
+
+            max-width: 720px;
+
+            margin: auto;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            color: #606b73;
+        }
+
+
+        .career-pill {
+
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 11px 20px;
+
+            border-radius: 30px;
+
+            background: rgba(255, 255, 255, 0.9);
+
+            color: #5759ce;
+
+            font-weight: 700;
+
+            box-shadow:
+                0 10px 25px rgba(80, 80, 150, 0.10);
+        }
+
+
+        /* =====================================
+           MAIN
+        ===================================== */
+
+        .container {
+
+            width: 92%;
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            padding-bottom: 70px;
+        }
+
+
+        /* =====================================
+           SECTION HEADINGS
+        ===================================== */
+
+        .section {
+
+            margin-bottom: 65px;
+
+            animation: sectionAppear 0.8s ease;
+        }
+
+
+        @keyframes sectionAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(25px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+            }
+
+        }
+
+
+        .section-heading {
+
+            text-align: center;
+
+            margin-bottom: 28px;
+        }
+
+
+        .section-heading h2 {
+
+            font-size: 32px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .section-heading p {
+
+            color: #68737b;
+
+            line-height: 1.6;
+        }
+
+
+        /* =====================================
+           CARD GRID
+        ===================================== */
+
+        .card-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .card {
+
+            background:
+                rgba(255, 255, 255, 0.88);
+
+            backdrop-filter: blur(16px);
+
+            padding: 28px;
+
+            border-radius: 28px;
+
+            border:
+                1px solid rgba(255, 255, 255, 0.9);
+
+            box-shadow:
+                0 18px 50px rgba(60, 70, 100, 0.11);
+
+            transition: 0.35s ease;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .card::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 100px;
+
+            height: 100px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(120, 120, 240, 0.07);
+
+            right: -35px;
+
+            top: -35px;
+        }
+
+
+        .card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 25px 60px rgba(60, 70, 100, 0.18);
+        }
+
+
+        .card-icon {
+
+            width: 62px;
+
+            height: 62px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 30px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eef0ff,
+                    #f8edff
+                );
+
+            margin-bottom: 18px;
+        }
+
+
+        .card h3 {
+
+            font-size: 21px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .card p {
+
+            color: #69737c;
+
+            line-height: 1.6;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =====================================
+           BUTTON
+        ===================================== */
+
+        .primary-button {
+
+            border: none;
+
+            cursor: pointer;
+
+            padding: 12px 19px;
+
+            border-radius: 25px;
+
+            color: white;
+
+            font-weight: 700;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #595bd7,
+                    #9557d7
+                );
+
+            box-shadow:
+                0 8px 20px rgba(90, 80, 200, 0.22);
+
+            transition: 0.3s;
+        }
+
+
+        .primary-button:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 25px rgba(90, 80, 200, 0.32);
+        }
+
+
+        /* =====================================
+           ROLE TAGS
+        ===================================== */
+
+        .role-list {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .role-tag {
+
+            padding: 7px 12px;
+
+            border-radius: 20px;
+
+            background: #f0f1ff;
+
+            color: #5a5cc8;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+
+        /* =====================================
+           COUNTRIES
+        ===================================== */
+
+        .country-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .country-card {
+
+            background:
+                rgba(255, 255, 255, 0.88);
+
+            padding: 25px;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 15px 40px rgba(60, 70, 100, 0.10);
+
+            transition: 0.3s;
+        }
+
+
+        .country-card:hover {
+
+            transform: scale(1.03);
+        }
+
+
+        .country-flag {
+
+            font-size: 42px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .country-card h3 {
+
+            margin-bottom: 8px;
+        }
+
+
+        .country-card p {
+
+            color: #68727b;
+
+            line-height: 1.6;
+
+            margin-bottom: 12px;
+        }
+
+
+        .language {
+
+            display: inline-block;
+
+            padding: 6px 11px;
+
+            border-radius: 20px;
+
+            background: #eef9f5;
+
+            color: #258366;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+
+        /* =====================================
+           CV + PORTFOLIO
+        ===================================== */
+
+        .cv-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 25px;
+        }
+
+
+        .upload-box {
+
+            border: 2px dashed #c5c7ee;
+
+            border-radius: 25px;
+
+            padding: 35px 20px;
+
+            text-align: center;
+
+            background:
+                rgba(249, 249, 255, 0.75);
+
+            transition: 0.3s;
+        }
+
+
+        .upload-box:hover {
+
+            border-color: #7779dc;
+
+            background:
+                rgba(244, 244, 255, 0.95);
+        }
+
+
+        .upload-icon {
+
+            font-size: 48px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .upload-box p {
+
+            color: #707980;
+
+            margin-bottom: 20px;
+        }
+
+
+        #resumeInput {
+
+            display: none;
+        }
+
+
+        #resumeName {
+
+            margin-top: 15px;
+
+            font-size: 14px;
+
+            color: #5759ce;
+        }
+
+
+        /* =====================================
+           PORTFOLIO ITEMS
+        ===================================== */
+
+        .portfolio-list {
+
+            display: grid;
+
+            gap: 12px;
+
+            margin-top: 18px;
+        }
+
+
+        .portfolio-item {
+
+            padding: 14px 16px;
+
+            background: #f7f7ff;
+
+            border-radius: 15px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+
+        .portfolio-item span {
+
+            font-size: 21px;
+        }
+
+
+        /* =====================================
+           NEXT MILESTONES
+        ===================================== */
+
+        .milestone-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .milestone-card {
+
+            background:
+                rgba(255, 255, 255, 0.88);
+
+            padding: 25px;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 15px 40px rgba(60, 70, 100, 0.10);
+
+            transition: 0.3s ease;
+        }
+
+
+        .milestone-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 22px 50px rgba(60, 70, 100, 0.17);
+        }
+
+
+        .milestone-number {
+
+            width: 42px;
+
+            height: 42px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e9ebff,
+                    #f6e8ff
+                );
+
+            color: #595bd1;
+
+            font-weight: 800;
+
+            margin-bottom: 16px;
+        }
+
+
+        .milestone-card h3 {
+
+            margin-bottom: 9px;
+        }
+
+
+        .milestone-card p {
+
+            color: #68727b;
+
+            line-height: 1.6;
+        }
+
+
+        .milestone-tag {
+
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 6px 11px;
+
+            border-radius: 20px;
+
+            background: #f1f2ff;
+
+            color: #5a5cc8;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================
+           FINAL MESSAGE
+        ===================================== */
+
+        .future-message {
+
+            padding: 40px;
+
+            text-align: center;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(235, 237, 255, 0.95),
+                    rgba(250, 237, 255, 0.95)
+                );
+
+            box-shadow:
+                0 18px 50px rgba(70, 70, 130, 0.10);
+        }
+
+
+        .future-message h2 {
+
+            font-size: 30px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .future-message p {
+
+            max-width: 680px;
+
+            margin: auto;
+
+            color: #667079;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================
+           FOOTER
+        ===================================== */
+
+        footer {
+
+            text-align: center;
+
+            padding: 30px;
+
+            color: #7a838b;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================
+           RESPONSIVE
+        ===================================== */
+
+        @media (max-width: 850px) {
+
+            .card-grid,
+            .country-grid,
+            .milestone-grid,
+            .cv-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .navbar {
+
+                width: 94%;
+            }
+
+
+            .hero {
+
+                margin-top: 40px;
+            }
+
+
+            .hero h1 {
+
+                font-size: 42px;
+            }
+
+
+            .hero p {
+
+                font-size: 16px;
+            }
+
+
+            .card {
+
+                padding: 22px;
+            }
+
+
+            .future-message {
+
+                padding: 28px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         BACKGROUND DECORATION
+    ====================================== -->
+
+    <div class="blob blob-one"></div>
+
+    <div class="blob blob-two"></div>
+
+    <div class="blob blob-three"></div>
+
+
+
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Pragathi
+        </div>
+
+        <a href="roadmap.html" class="back-button">
+            ← Back to Roadmap
+        </a>
+
+    </nav>
+
+
+
+    <!-- =====================================
+         HERO
+    ====================================== -->
+
+    <section class="hero">
+
+        <div class="hero-label">
+            YOUR NEXT CHAPTER
+        </div>
+
+
+        <h1>
+            Beyond Today —
+            <br>
+            Your Future, Mapped. ✨
+        </h1>
+
+
+        <p>
+            Explore where your skills can take you,
+            what you can become, and what you can strive
+            for next.
+        </p>
+
+
+        <div
+            class="career-pill"
+            id="careerDisplay"
+        >
+            🎯 Your chosen career
+        </div>
+
+    </section>
+
+
+
+    <main class="container">
+
+
+        <!-- =====================================
+             1. WHAT CAN I BECOME?
+        ====================================== -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <h2>
+                    💼 What Can I Become?
+                </h2>
+
+                <p>
+                    Explore possible career roles connected
+                    to your chosen career path.
+                </p>
+
+            </div>
+
+
+            <div
+                class="card-grid"
+                id="careerRoles"
+            >
+
+                <!-- JavaScript adds roles here -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             2. BEYOND BORDERS
+        ====================================== -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <h2>
+                    🌍 Beyond Borders
+                </h2>
+
+                <p>
+                    See how your career can open doors
+                    to opportunities around the world.
+                </p>
+
+            </div>
+
+
+            <div
+                class="country-grid"
+                id="countryGrid"
+            >
+
+                <!-- JavaScript adds countries here -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             3. CV + PORTFOLIO
+        ====================================== -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <h2>
+                    📄 Build Your Professional Identity
+                </h2>
+
+                <p>
+                    Turn your skills, projects and achievements
+                    into a strong professional profile.
+                </p>
+
+            </div>
+
+
+            <div class="cv-grid">
+
+
+                <!-- CV ANALYSIS -->
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        📄
+                    </div>
+
+
+                    <h3>
+                        CV / Resume Analysis
+                    </h3>
+
+
+                    <p>
+                        Upload your resume to identify
+                        missing skills, sections and areas
+                        you can improve.
+                    </p>
+
+
+                    <div class="upload-box">
+
+                        <div class="upload-icon">
+                            📤
+                        </div>
+
+
+                        <h3>
+                            Upload your resume
+                        </h3>
+
+
+                        <p>
+                            PDF or document
+                        </p>
+
+
+                        <label
+                            for="resumeInput"
+                            class="primary-button"
+                        >
+                            Choose Resume
+                        </label>
+
+
+                        <input
+                            type="file"
+                            id="resumeInput"
+                            accept=".pdf,.doc,.docx"
+                        >
+
+
+                        <p id="resumeName"></p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PORTFOLIO -->
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🗂️
+                    </div>
+
+
+                    <h3>
+                        Portfolio Builder
+                    </h3>
+
+
+                    <p>
+                        Organise your projects, skills,
+                        certifications and achievements
+                        in one professional space.
+                    </p>
+
+
+                    <div class="portfolio-list">
+
+
+                        <div class="portfolio-item">
+
+                            <span>🚀</span>
+
+                            <div>
+
+                                <strong>
+                                    Projects
+                                </strong>
+
+                                <br>
+
+                                <small>
+                                    Showcase what you built
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="portfolio-item">
+
+                            <span>🏆</span>
+
+                            <div>
+
+                                <strong>
+                                    Achievements
+                                </strong>
+
+                                <br>
+
+                                <small>
+                                    Add awards and certificates
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="portfolio-item">
+
+                            <span>🧠</span>
+
+                            <div>
+
+                                <strong>
+                                    Skills
+                                </strong>
+
+                                <br>
+
+                                <small>
+                                    Highlight your strengths
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="portfolio-item">
+
+                            <span>💼</span>
+
+                            <div>
+
+                                <strong>
+                                    Experience
+                                </strong>
+
+                                <br>
+
+                                <small>
+                                    Add internships and activities
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="portfolio-item">
+
+                            <span>🔗</span>
+
+                            <div>
+
+                                <strong>
+                                    Professional Links
+                                </strong>
+
+                                <br>
+
+                                <small>
+                                    Connect your online profile
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <button
+                        class="primary-button"
+                        onclick="startPortfolio()"
+                        style="margin-top:20px;"
+                    >
+                        Start Portfolio
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             WHAT SHOULD I STRIVE FOR NEXT?
+        ====================================== -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <h2>
+                    🌟 What Should I Strive For Next?
+                </h2>
+
+                <p>
+                    Turn your current position into your next
+                    career milestone.
+                </p>
+
+            </div>
+
+
+            <div
+                class="milestone-grid"
+                id="milestoneGrid"
+            >
+
+                <!-- JavaScript adds milestones here -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             FINAL MESSAGE
+        ====================================== -->
+
+        <section class="future-message">
+
+            <h2>
+                🚀 Your future is bigger than one job.
+            </h2>
+
+
+            <p>
+                Keep learning, keep building and keep exploring.
+                Pragathi helps you understand not only where
+                you are today, but where you could go next.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+        Pragathi • You decide your future 🌱
+
+    </footer>
+
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script>
+
+
+        /* =====================================
+           SELECTED CAREER
+        ====================================== */
+
+        const selectedCareer =
+            localStorage.getItem("selectedCareer") ||
+            "Engineering & Technology";
+
+
+        document.getElementById("careerDisplay").textContent =
+            "🎯 Your chosen path: " + selectedCareer;
+
+
+
+        /* =====================================
+           CAREER DATA
+        ====================================== */
+
+        const careerData = {
+
+
+            "Engineering & Technology": {
+
+                roles: [
+
+                    "Software Developer",
+                    "Web Developer",
+                    "Data Analyst",
+                    "AI / ML Engineer",
+                    "Cybersecurity Analyst",
+                    "Cloud Engineer"
+
+                ],
+
+                countries: [
+
+                    {
+                        flag: "🇺🇸",
+                        country: "United States",
+                        text: "Technology and software career opportunities.",
+                        language: "English"
+                    },
+
+                    {
+                        flag: "🇩🇪",
+                        country: "Germany",
+                        text: "Engineering, technology and research pathways.",
+                        language: "German"
+                    },
+
+                    {
+                        flag: "🇨🇦",
+                        country: "Canada",
+                        text: "Technology, software and research opportunities.",
+                        language: "English / French"
+                    }
+
+                ]
+
+            },
+
+
+            "Medicine & Healthcare": {
+
+                roles: [
+
+                    "Doctor",
+                    "Medical Researcher",
+                    "Public Health Professional",
+                    "Healthcare Administrator",
+                    "Nutritionist",
+                    "Biomedical Professional"
+
+                ],
+
+                countries: [
+
+                    {
+                        flag: "🇬🇧",
+                        country: "United Kingdom",
+                        text: "Healthcare, research and public health pathways.",
+                        language: "English"
+                    },
+
+                    {
+                        flag: "🇩🇪",
+                        country: "Germany",
+                        text: "Healthcare and medical research opportunities.",
+                        language: "German"
+                    },
+
+                    {
+                        flag: "🇨🇦",
+                        country: "Canada",
+                        text: "Healthcare and research-related pathways.",
+                        language: "English / French"
+                    }
+
+                ]
+
+            },
+
+
+            "Finance & Banking": {
+
+                roles: [
+
+                    "Financial Analyst",
+                    "Investment Analyst",
+                    "Banking Professional",
+                    "Accountant",
+                    "Business Analyst",
+                    "Financial Consultant"
+
+                ],
+
+                countries: [
+
+                    {
+                        flag: "🇬🇧",
+                        country: "United Kingdom",
+                        text: "Finance, banking and business opportunities.",
+                        language: "English"
+                    },
+
+                    {
+                        flag: "🇸🇬",
+                        country: "Singapore",
+                        text: "Banking, finance and business ecosystem.",
+                        language: "English"
+                    },
+
+                    {
+                        flag: "🇦🇪",
+                        country: "UAE",
+                        text: "Finance and business opportunities.",
+                        language: "English / Arabic"
+                    }
+
+                ]
+
+            },
+
+
+            "Business & Management": {
+
+                roles: [
+
+                    "Business Analyst",
+                    "Marketing Manager",
+                    "Entrepreneur",
+                    "Product Manager",
+                    "HR Professional",
+                    "Business Consultant"
+
+                ],
+
+                countries: [
+
+                    {
+                        flag: "🇸🇬",
+                        country: "Singapore",
+                        text: "Business and management opportunities.",
+                        language: "English"
+                    },
+
+                    {
+                        flag: "🇦🇪",
+                        country: "UAE",
+                        text: "Business and entrepreneurship pathways.",
+                        language: "English / Arabic"
+                    },
+
+                    {
+                        flag: "🇬🇧",
+                        country: "United Kingdom",
+                        text: "Management and consulting opportunities.",
+                        language: "English"
+                    }
+
+                ]
+
+            },
+
+
+            "Law & Public Service": {
+
+                roles: [
+
+                    "Lawyer",
+                    "Legal Researcher",
+                    "Policy Analyst",
+                    "Civil Services Professional",
+                    "Legal Consultant",
+                    "Public Administration Professional"
+
+                ],
+
+                countries: [
+
+                    {
+                        flag: "🇬🇧",
+                        country: "United Kingdom",
+                        text: "Legal research, policy and public service pathways.",
+                        language: "English"
+                    },
+
+                    {
+                        flag: "🇨🇦",
+                        country: "Canada",
+                        text: "Public policy and legal pathways.",
+                        language: "English / French"
+                    },
+
+                    {
+                        flag: "🇦🇺",
+                        country: "Australia",
+                        text: "Public administration and policy opportunities.",
+                        language: "English"
+                    }
+
+                ]
+
+            },
+
+
+            "Design & Creative Arts": {
+
+                roles: [
+
+                    "UI/UX Designer",
+                    "Graphic Designer",
+                    "Product Designer",
+                    "Animator",
+                    "Illustrator",
+                    "Creative Director"
+
+                ],
+
+                countries: [
+
+                    {
+                        flag: "🇬🇧",
+                        country: "United Kingdom",
+                        text: "Creative industries and digital media.",
+                        language: "English"
+                    },
+
+                    {
+                        flag: "🇯🇵",
+                        country: "Japan",
+                        text: "Design, animation and creative technology.",
+                        language: "Japanese"
+                    },
+
+                    {
+                        flag: "🇩🇪",
+                        country: "Germany",
+                        text: "Design and digital product opportunities.",
+                        language: "German"
+                    }
+
+                ]
+
+            },
+
+
+            "Science & Research": {
+
+                roles: [
+
+                    "Research Scientist",
+                    "Data Scientist",
+                    "Laboratory Researcher",
+                    "Scientific Analyst",
+                    "Environmental Scientist",
+                    "Research Assistant"
+
+                ],
+
+                countries: [
+
+                    {
+                        flag: "🇩🇪",
+                        country: "Germany",
+                        text: "Research and scientific opportunities.",
+                        language: "German"
+                    },
+
+                    {
+                        flag: "🇬🇧",
+                        country: "United Kingdom",
+                        text: "Science and academic pathways.",
+                        language: "English"
+                    },
+
+                    {
+                        flag: "🇨🇦",
+                        country: "Canada",
+                        text: "Scientific research opportunities.",
+                        language: "English / French"
+                    }
+
+                ]
+
+            }
+
+        };
+
+
+
+        /* =====================================
+           GET CAREER INFORMATION
+        ====================================== */
+
+        const data =
+            careerData[selectedCareer] ||
+            careerData["Engineering & Technology"];
+
+
+
+        /* =====================================
+           DISPLAY CAREER ROLES
+        ====================================== */
+
+        const careerRoles =
+            document.getElementById("careerRoles");
+
+
+        data.roles.forEach(function(role) {
+
+
+            careerRoles.innerHTML += `
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        💡
+                    </div>
+
+                    <h3>
+                        ${role}
+                    </h3>
+
+                    <p>
+                        A possible career direction connected
+                        to your selected career path.
+                    </p>
+
+                    <div class="role-list">
+
+                        <span class="role-tag">
+                            Explore
+                        </span>
+
+                        <span class="role-tag">
+                            Build Skills
+                        </span>
+
+                        <span class="role-tag">
+                            Gain Experience
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="primary-button"
+                        onclick="exploreRole('${role}')"
+                    >
+                        Explore Role
+                    </button>
+
+                </div>
+
+            `;
+
+        });
+
+
+
+        /* =====================================
+           DISPLAY COUNTRIES
+        ====================================== */
+
+        const countryGrid =
+            document.getElementById("countryGrid");
+
+
+        data.countries.forEach(function(place) {
+
+
+            countryGrid.innerHTML += `
+
+                <div class="country-card">
+
+                    <div class="country-flag">
+                        ${place.flag}
+                    </div>
+
+                    <h3>
+                        ${place.country}
+                    </h3>
+
+                    <p>
+                        ${place.text}
+                    </p>
+
+                    <span class="language">
+                        🗣️ ${place.language}
+                    </span>
+
+                </div>
+
+            `;
+
+        });
+
+
+
+        /* =====================================
+           NEXT MILESTONE DATA
+        ====================================== */
+
+        const milestoneData = {
+
+
+            "Engineering & Technology": [
+
+                {
+                    title: "Strengthen Programming",
+                    text: "Build stronger programming and problem-solving skills.",
+                    tag: "Technical Skill"
+                },
+
+                {
+                    title: "Build Real Projects",
+                    text: "Create projects that demonstrate what you can actually build.",
+                    tag: "Projects"
+                },
+
+                {
+                    title: "Build Your Developer Profile",
+                    text: "Add projects, certifications and achievements to your professional profile.",
+                    tag: "Portfolio"
+                },
+
+                {
+                    title: "Gain Practical Experience",
+                    text: "Try internships, hackathons, workshops or team projects.",
+                    tag: "Experience"
+                },
+
+                {
+                    title: "Prepare for Opportunities",
+                    text: "Develop interview and career-specific skills.",
+                    tag: "Career Ready"
+                },
+
+                {
+                    title: "Keep Exploring",
+                    text: "Explore AI, cybersecurity, data, cloud and other technology areas.",
+                    tag: "Future Growth"
+                }
+
+            ],
+
+
+            "Medicine & Healthcare": [
+
+                {
+                    title: "Strengthen Core Knowledge",
+                    text: "Build strong foundations in biology and healthcare subjects.",
+                    tag: "Knowledge"
+                },
+
+                {
+                    title: "Explore Specialisations",
+                    text: "Research different medical and healthcare career pathways.",
+                    tag: "Exploration"
+                },
+
+                {
+                    title: "Build Research Experience",
+                    text: "Participate in research, projects and academic activities.",
+                    tag: "Research"
+                },
+
+                {
+                    title: "Earn Relevant Certifications",
+                    text: "Build your professional profile through relevant certifications.",
+                    tag: "Certification"
+                },
+
+                {
+                    title: "Gain Practical Exposure",
+                    text: "Look for volunteering, internships and relevant experiences.",
+                    tag: "Experience"
+                },
+
+                {
+                    title: "Prepare for Your Next Step",
+                    text: "Research qualifications and requirements for your target path.",
+                    tag: "Career Ready"
+                }
+
+            ],
+
+
+            "Finance & Banking": [
+
+                {
+                    title: "Strengthen Financial Skills",
+                    text: "Improve accounting, finance and analytical thinking.",
+                    tag: "Core Skill"
+                },
+
+                {
+                    title: "Learn Data Tools",
+                    text: "Develop practical spreadsheet and data-analysis skills.",
+                    tag: "Technical Skill"
+                },
+
+                {
+                    title: "Build Finance Projects",
+                    text: "Create projects demonstrating financial analysis.",
+                    tag: "Projects"
+                },
+
+                {
+                    title: "Earn Certifications",
+                    text: "Explore certifications relevant to your finance pathway.",
+                    tag: "Certification"
+                },
+
+                {
+                    title: "Gain Industry Exposure",
+                    text: "Look for internships, competitions and business experiences.",
+                    tag: "Experience"
+                },
+
+                {
+                    title: "Prepare for Opportunities",
+                    text: "Develop communication, analytical and interview skills.",
+                    tag: "Career Ready"
+                }
+
+            ],
+
+
+            "Business & Management": [
+
+                {
+                    title: "Develop Business Knowledge",
+                    text: "Strengthen your understanding of management, marketing and business.",
+                    tag: "Knowledge"
+                },
+
+                {
+                    title: "Improve Communication",
+                    text: "Build presentation, teamwork and leadership abilities.",
+                    tag: "Soft Skill"
+                },
+
+                {
+                    title: "Build Business Projects",
+                    text: "Work on case studies, business ideas or entrepreneurship projects.",
+                    tag: "Projects"
+                },
+
+                {
+                    title: "Gain Practical Experience",
+                    text: "Explore internships, events, competitions and team projects.",
+                    tag: "Experience"
+                },
+
+                {
+                    title: "Build Your Professional Profile",
+                    text: "Showcase achievements, projects and leadership experience.",
+                    tag: "Portfolio"
+                },
+
+                {
+                    title: "Explore Career Paths",
+                    text: "Explore management, marketing, consulting and entrepreneurship.",
+                    tag: "Future Growth"
+                }
+
+            ],
+
+
+            "Law & Public Service": [
+
+                {
+                    title: "Strengthen Legal Knowledge",
+                    text: "Build strong foundations in law and public affairs.",
+                    tag: "Knowledge"
+                },
+
+                {
+                    title: "Develop Research Skills",
+                    text: "Improve research, analysis and critical thinking.",
+                    tag: "Core Skill"
+                },
+
+                {
+                    title: "Build Relevant Experience",
+                    text: "Explore internships, volunteering and academic activities.",
+                    tag: "Experience"
+                },
+
+                {
+                    title: "Develop Communication",
+                    text: "Strengthen writing, presentation and argumentation.",
+                    tag: "Soft Skill"
+                },
+
+                {
+                    title: "Build Your Profile",
+                    text: "Document achievements, projects, certifications and experiences.",
+                    tag: "Portfolio"
+                },
+
+                {
+                    title: "Prepare for Your Target Path",
+                    text: "Research qualifications, examinations and career requirements.",
+                    tag: "Career Ready"
+                }
+
+            ],
+
+
+            "Design & Creative Arts": [
+
+                {
+                    title: "Strengthen Design Skills",
+                    text: "Improve your creative and technical design abilities.",
+                    tag: "Core Skill"
+                },
+
+                {
+                    title: "Build Creative Projects",
+                    text: "Create work that demonstrates your design thinking.",
+                    tag: "Projects"
+                },
+
+                {
+                    title: "Create a Strong Portfolio",
+                    text: "Show your best work with clear project explanations.",
+                    tag: "Portfolio"
+                },
+
+                {
+                    title: "Learn Industry Tools",
+                    text: "Develop practical skills with relevant creative software.",
+                    tag: "Technical Skill"
+                },
+
+                {
+                    title: "Gain Real Experience",
+                    text: "Try internships, freelance work, competitions or collaborations.",
+                    tag: "Experience"
+                },
+
+                {
+                    title: "Explore Specialisations",
+                    text: "Explore UI/UX, animation, illustration and product design.",
+                    tag: "Future Growth"
+                }
+
+            ],
+
+
+            "Science & Research": [
+
+                {
+                    title: "Strengthen Scientific Knowledge",
+                    text: "Build a strong foundation in your chosen scientific field.",
+                    tag: "Knowledge"
+                },
+
+                {
+                    title: "Develop Research Skills",
+                    text: "Improve scientific analysis and research problem-solving.",
+                    tag: "Research"
+                },
+
+                {
+                    title: "Work on Research Projects",
+                    text: "Build practical research experience through projects.",
+                    tag: "Projects"
+                },
+
+                {
+                    title: "Learn Data Analysis",
+                    text: "Develop useful analytical and computational skills.",
+                    tag: "Technical Skill"
+                },
+
+                {
+                    title: "Build Your Academic Profile",
+                    text: "Collect projects, certifications, presentations and achievements.",
+                    tag: "Portfolio"
+                },
+
+                {
+                    title: "Explore Research Opportunities",
+                    text: "Look for internships, research programs and higher-study pathways.",
+                    tag: "Future Growth"
+                }
+
+            ]
+
+        };
+
+
+
+        /* =====================================
+           DISPLAY MILESTONES
+        ====================================== */
+
+        const milestones =
+            milestoneData[selectedCareer] ||
+            milestoneData["Engineering & Technology"];
+
+
+        const milestoneGrid =
+            document.getElementById("milestoneGrid");
+
+
+        milestones.forEach(function(milestone, index) {
+
+
+            milestoneGrid.innerHTML += `
+
+                <div class="milestone-card">
+
+                    <div class="milestone-number">
+                        ${index + 1}
+                    </div>
+
+                    <h3>
+                        ${milestone.title}
+                    </h3>
+
+                    <p>
+                        ${milestone.text}
+                    </p>
+
+                    <span class="milestone-tag">
+                        ${milestone.tag}
+                    </span>
+
+                </div>
+
+            `;
+
+        });
+
+
+
+        /* =====================================
+   EXPLORE ROLE
+====================================== */
+
+function exploreRole(role) {
+
+    const descriptions = {
+
+        "Software Developer":
+            "Builds software applications using programming and problem-solving skills.",
+
+        "Web Developer":
+            "Creates and maintains websites and web applications using web technologies.",
+
+        "Data Analyst":
+            "Studies data to find useful patterns and insights that help in decision-making.",
+
+        "AI / ML Engineer":
+            "Builds intelligent systems using artificial intelligence and machine learning.",
+
+        "Cybersecurity Analyst":
+            "Helps protect computer systems, networks and data from cyber threats.",
+
+        "Cloud Engineer":
+            "Builds and manages cloud-based systems, servers and infrastructure.",
+
+        "Doctor":
+            "Diagnoses and treats health conditions and helps patients maintain their health.",
+
+        "Medical Researcher":
+            "Conducts research to understand diseases, treatments and medical discoveries.",
+
+        "Financial Analyst":
+            "Studies financial information and data to support financial decisions.",
+
+        "Investment Analyst":
+            "Researches companies and markets to understand investment opportunities and risks.",
+
+        "Accountant":
+            "Manages financial records, transactions and financial reports.",
+
+        "Business Analyst":
+            "Studies business problems and data to help organizations improve.",
+
+        "Marketing Manager":
+            "Plans marketing strategies and campaigns to promote products and services.",
+
+        "Entrepreneur":
+            "Creates business ideas and develops them into products or services.",
+
+        "Product Manager":
+            "Helps plan and develop products based on customer needs.",
+
+        "HR Professional":
+            "Works with recruitment, employee development and workplace management.",
+
+        "Lawyer":
+            "Provides legal advice and represents people or organizations in legal matters.",
+
+        "Legal Researcher":
+            "Studies laws, regulations and legal cases to understand legal issues.",
+
+        "UI/UX Designer":
+            "Designs digital interfaces and experiences that are useful and easy to use.",
+
+        "Graphic Designer":
+            "Creates visual content such as posters, branding and digital designs.",
+
+        "Product Designer":
+            "Designs products by combining creativity, user research and problem-solving.",
+
+        "Research Scientist":
+            "Conducts experiments and research to discover new scientific knowledge.",
+
+        "Data Scientist":
+            "Uses data, statistics and programming to discover useful patterns and insights."
+
+    };
+
+    const description =
+        descriptions[role] ||
+        "Explore this career to learn more about its opportunities and skills.";
+
+    const button = event.target;
+
+    const descriptionBox = document.createElement("p");
+
+    descriptionBox.textContent = description;
+
+    descriptionBox.style.marginTop = "15px";
+    descriptionBox.style.color = "#68727b";
+    descriptionBox.style.lineHeight = "1.6";
+
+    button.parentElement.appendChild(descriptionBox);
+
+    button.style.display = "none";
+}
+
+
+
+        /* =====================================
+           RESUME UPLOAD
+        ====================================== */
+
+        const resumeInput =
+            document.getElementById("resumeInput");
+
+
+        resumeInput.addEventListener(
+            "change",
+            function() {
+
+
+                if (resumeInput.files.length > 0) {
+
+
+                    document.getElementById("resumeName").textContent =
+
+                        "📄 Selected: " +
+                        resumeInput.files[0].name;
+
+
+                }
+
+            }
+        );
+
+
+
+        /* =====================================
+           PORTFOLIO
+        ====================================== */
+
+       function startPortfolio() {
+    window.location.href = "portfolio.html";
+}
+
+
+    </script>
+
+
+</body>
+
+</html>
